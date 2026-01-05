@@ -1,0 +1,7 @@
+In less then 150 words, explain the schedule of {data[activityName]} for Schulich Soundstage (music club), in the following order:
+
+Performers register for a 30 minute window, and are given 5 minutes within that window to play.
+
+Attendees are welcome to stay for the event.
+
+Pizza is provided during the event.

@@ -1,0 +1,5 @@
+In less then 150 words, describe the activity {data[activityName]} for Schulich Soundstage (music club), taking some liberties but with the following points in this order:
+
+Attendees can do an under 5 minute performance with queuing system or can enjoy the performances by their peers .
+
+Members of Schulich Soundstage will be providing pizza, free for members, purchase per slice otherwise.

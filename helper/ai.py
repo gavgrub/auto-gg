@@ -19,7 +19,7 @@ def wordsToTokens(words: int) -> int:
     return int(words / 0.75) + 5
 
 def generateText(prompt, maxWords=100) -> str:
-    maxTokens = wordsToTokens()
+    maxTokens = wordsToTokens(maxWords)
 
     payload = {
         "model": "llama-3.1-8b-instant",

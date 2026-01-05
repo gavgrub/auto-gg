@@ -1,0 +1,7 @@
+In less then 150 words, describe how the activity {data[activityName]} for Schulich Soundstage (music club) impacts experiential learning or has relevance to the betterment of the engineering student experience, taking some liberties but with the following points in this order:
+
+Being in a space where students can perform and enjoy live music is valuable.
+
+Gives engineering students a break from their workload and a chance to engage in other interests.
+
+More then 100 students attend each event and they meet peers with similar hobbies and offer meaningful support.

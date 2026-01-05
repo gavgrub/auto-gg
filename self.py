@@ -6,6 +6,7 @@ from docx.shared import Inches
 from helper.ai import generateText
 from helper.doc import formatDoc
 from helper.text import ordinal
+from helper.text import loadPrompt
 
 # Load Data for Document
 with open("data.json", "r", encoding="utf-8") as f:
@@ -73,7 +74,7 @@ table.cell(2, 0).merge(table.cell(2, 1))
 table.cell(2, 0).text = "Description of Activity"
 
 table.cell(3, 0).merge(table.cell(3, 1))
-table.cell(3, 0).text = "TO ADD" # ADD IN THE AI
+table.cell(3, 0).text = generateText(loadPrompt("prompts/description.txt", data), 150)
 
 table.cell(4, 0).text = "Start Date of Activity"
 table.cell(4, 1).text = data["startDate"]
@@ -88,7 +89,7 @@ table.cell(7, 0).merge(table.cell(7, 1))
 table.cell(7, 0).text = f"Schedule / Itinerary of Activity ({data['time']})"
 
 table.cell(8, 0).merge(table.cell(8, 1))
-table.cell(8, 0).text = f"TO ADD" # ADD IN THE AI
+table.cell(8, 0).text = generateText(loadPrompt("prompts/schedule.txt", data), 150)
 
 doc.add_paragraph("")
 
@@ -98,9 +99,9 @@ doc.add_paragraph().add_run("Reflection").bold = True
 table = doc.add_table(rows=4, cols=1)
 
 table.cell(0, 0).text = "How does this activity qualify under this category?"
-table.cell(1, 0).text = "TO ADD" # ADD IN THE AI
+table.cell(1, 0).text = generateText(loadPrompt("prompts/qualification.txt", data), 150)
 table.cell(2, 0).text = "How does this activity have an impact on Experiential Learning and/or have relevance towards the betterment of the Engineering student experience?"
-table.cell(3, 0).text = "TO ADD" # ADD IN THE AI
+table.cell(3, 0).text = generateText(loadPrompt("prompts/betterment.txt", data), 150)
 
 doc.add_paragraph("")
 
