@@ -1,0 +1,16 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@ucalgary.ca",
+    "ucid": "12345678",
+    "club": "Schulich Soundstage",
+    "position": "President",
+
+    "activityName": "Open Mic",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+
+    "activityType": "Category A: Student Life Events and Mental Well-Being",
+    "location": "ENGG Building, Social Staircase",
+    "time": "6pm-9pm"
+}
