@@ -1,3 +1,6 @@
+# Generates a SELF funding application document
+# Written by Gavin Grubert
+
 from json import load
 from datetime import date
 from docx import Document

@@ -1,4 +1,4 @@
-In less then 150 words, describe the activity {data[activityName]} for Schulich Soundstage (music club), taking some liberties but with the following points in this order:
+In less then 150 words, describe the activity {data[activityName]} for Schulich Soundstage (a music club for the university of calgary). Write in future tense and without invoking the writer as if filling out an application for this event. Take some liberties but use the following points in this order:
 
 Attendees can do an under 5 minute performance with queuing system or can enjoy the performances by their peers .
 

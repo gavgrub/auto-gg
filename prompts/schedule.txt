@@ -1,7 +1,7 @@
-In less then 150 words, explain the schedule of {data[activityName]} for Schulich Soundstage (music club), in the following order:
+In less then 150 words, explain the schedule of {data[activityName]} for Schulich Soundstage (music club), in the following order. Write in a paragraph in future tense, without invoking the writer as if filling out an application.
 
-Performers register for a 30 minute window, and are given 5 minutes within that window to play.
+Performers register for a 30 minute window, and are given 5 minutes within that window to perform their song.
 
-Attendees are welcome to stay for the event.
+While this is occurring, attendees are welcome to stay for the event for free.
 
-Pizza is provided during the event.
+Pizza is provided during the event, free for members and at a cost for non-members.
