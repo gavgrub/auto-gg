@@ -1,0 +1,12 @@
+{
+    "activityName": "Open Mic Night",
+
+    "activityDescription": "Description: A casual campus event where individuals or groups perform live music. Participants may perform with a band, instrumental accompaniment, karaoke/backing tracks, or solo. The atmosphere is informal and welcoming to performers of all experience levels. Activities: Live musical performances in front of an audience. Food is provided before the event begins, and performers sign up in a queue to take turns on stage. Eligibility: Open to all students regardless of faculty or club membership. Location: Schulich Social Stairs, Engineering Building, University of Calgary Schedule: Sign-up and food begin at 5:30 PM Performances begin at 6:00 PM Purpose: To provide an inclusive space for students to share musical talent and build community through live performance.",
+
+    "time": "5pm-7pm",
+    "startDate": "Month Day, Year",
+    "endDate": "Month Day, Year",
+
+    "activityType": "Category A: Student Life Events and Mental Well-Being",
+    "location": "ENGG Building, Social Staircase"
+}

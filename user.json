@@ -1,0 +1,11 @@
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@ucalgary.ca",
+    "id": "12345678",
+    "position": "VP Logistics",
+    "uni": "University of Calgary",
+
+    "club": "Schulich Soundstage",
+    "clubType": "Undergraduate music club"
+}

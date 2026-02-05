@@ -1,0 +1,4 @@
+In under 150 words, describe the event {data[activityName]}. Write in future tense and in a formal, third-person tone suitable for an event application.
+Do not use first-person language (no I, we, or our).
+Do not mention the organizing club or describe the club itself.
+Focus only on what will happen during the event, including activities, structure, and participant experience.

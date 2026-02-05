@@ -1,20 +1,39 @@
 # Generates a SELF funding application document
 # Written by Gavin Grubert
-
 from json import load
 from datetime import date
 from docx import Document
 from docx.shared import Inches
 
-from helper.ai import generateText
-from helper.doc import formatDoc
-from helper.text import ordinal
-from helper.text import loadPrompt
+from src.helper.ai import generateText
+from src.helper.doc import formatDoc
+from src.helper.text import ordinal
+from src.helper.text import loadPrompt
 
-# Load Data for Document
-with open("data.json", "r", encoding="utf-8") as f:
-    data = load(f)
+import sys
 
+# Load Event Info
+if len(sys.argv) < 2:
+    raise "No event folder path provided"
+else:
+    try:
+        with open(f"{sys.argv[1]}/info.json", "r", encoding="utf-8") as f:
+            info = load(f)
+    except Exception:
+        raise "Error loading info.json file"
+
+# Load User Info
+try:
+    with open("user.json", "r", encoding="utf-8") as f:
+        user = load(f)
+except Exception:
+    raise "Error loading user.json file"
+
+data = {**user, **info}
+
+print(f"Generating document, this may take a few seconds")
+
+# Load Current Date
 today = date.today()
 
 # Create document
@@ -52,7 +71,7 @@ table.cell(2, 0).text = "UCalgary Email"
 table.cell(2, 1).text = data["email"]
 
 table.cell(3, 0).text = "UCID"
-table.cell(3, 1).text = data["ucid"]
+table.cell(3, 1).text = data["id"]
 
 table.cell(4, 0).text = "Club / Team Name"
 table.cell(4, 1).text = data["club"]
@@ -77,7 +96,7 @@ table.cell(2, 0).merge(table.cell(2, 1))
 table.cell(2, 0).text = "Description of Activity"
 
 table.cell(3, 0).merge(table.cell(3, 1))
-table.cell(3, 0).text = generateText(loadPrompt("prompts/description.txt", data), 150)
+table.cell(3, 0).text = generateText(loadPrompt("src/prompts/description.txt", data), 150)
 
 table.cell(4, 0).text = "Start Date of Activity"
 table.cell(4, 1).text = data["startDate"]
@@ -92,7 +111,7 @@ table.cell(7, 0).merge(table.cell(7, 1))
 table.cell(7, 0).text = f"Schedule / Itinerary of Activity ({data['time']})"
 
 table.cell(8, 0).merge(table.cell(8, 1))
-table.cell(8, 0).text = generateText(loadPrompt("prompts/schedule.txt", data), 150)
+table.cell(8, 0).text = generateText(loadPrompt("src/prompts/schedule.txt", data), 150)
 
 doc.add_paragraph("")
 
@@ -102,9 +121,9 @@ doc.add_paragraph().add_run("Reflection").bold = True
 table = doc.add_table(rows=4, cols=1)
 
 table.cell(0, 0).text = "How does this activity qualify under this category?"
-table.cell(1, 0).text = generateText(loadPrompt("prompts/qualification.txt", data), 150)
+table.cell(1, 0).text = generateText(loadPrompt("src/prompts/qualification.txt", data), 150)
 table.cell(2, 0).text = "How does this activity have an impact on Experiential Learning and/or have relevance towards the betterment of the Engineering student experience?"
-table.cell(3, 0).text = generateText(loadPrompt("prompts/betterment.txt", data), 150)
+table.cell(3, 0).text = generateText(loadPrompt("src/prompts/betterment.txt", data), 150)
 
 doc.add_paragraph("")
 
@@ -116,4 +135,6 @@ doc.add_paragraph("Please refer to \"SELF Budget\" excel sheet.")
 formatDoc(doc)
 
 # Save the document
-doc.save(f"{data['activityName']} SELF Application.docx")
+file = f"{info['activityName']} SELF Application.docx"
+doc.save(file)
+print(f"Saved document as '{file}'")
